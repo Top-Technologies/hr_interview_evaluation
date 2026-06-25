@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--
+        hr.job primary form view.
+        We inherit from the hr module base view: hr.view_hr_job_form
+    -->
+    <record id="view_hr_job_evaluation_tab" model="ir.ui.view">
+        <field name="name">hr.job.evaluation.tab</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//notebook" position="inside">
+                <page string="Interview Evaluations" name="interview_evaluations_page">
+
+                    <div class="o_interview_form_header">
+                        <h4 class="o_interview_company_name">
+                            TOP SYSTEM SOLUTION AND TECHNOLOGY Pvt. Ltd. Co.
+                        </h4>
+                        <h5 class="o_interview_form_title">Interview Form</h5>
+                        <div class="o_interview_job_title">
+                            <strong>Job title: </strong>
+                            <field name="name" readonly="1" />
+                        </div>
+                    </div>
+
+                    <field name="application_ids" string="Candidate Evaluations" nolabel="1" options="{'no_create': True}">
+                        <list string="Candidate Evaluations" create="false" delete="false" edit="false" decoration-success="evaluation_avg_total &gt;= 75" decoration-warning="evaluation_avg_total &gt;= 50 and evaluation_avg_total &lt; 75" decoration-danger="evaluation_avg_total &lt; 50 and evaluation_avg_total &gt; 0">
+                            <field name="partner_name" string="Name of Candidate" readonly="1" />
+                            <field name="evaluation_avg_personality" string="Avg Personality (10%)" />
+                            <field name="evaluation_avg_hard_skill" string="Avg Hard Skill (50%)" />
+                            <field name="evaluation_avg_communication" string="Avg Communication (30%)" />
+                            <field name="evaluation_avg_teamwork" string="Avg Team Work (10%)" />
+                            <field name="evaluation_avg_total" string="Avg Total Score" readonly="1" />
+                            <field name="evaluation_count" string="Interviewers" readonly="1" />
+                        </list>
+                    </field>
+
+                    <div class="o_interview_footer mt-3">
+                        <span class="text-muted fst-italic">
+                            <i class="fa fa-circle text-success me-1" />
+&#8805; 75 &#8212; Strong
+                            <i class="fa fa-circle text-warning ms-3 me-1" />
+50&#8211;74 &#8212; Moderate
+                            <i class="fa fa-circle text-danger ms-3 me-1" />
+&lt; 50 &#8212; Needs Review
+                        </span>
+                    </div>
+
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   HR Interview Evaluation — backend styles
+   Compatible with Odoo 19 Community (Bootstrap 5 base)
+═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Job Position form header ─────────────────────────────────────────── */
+.o_interview_form_header {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.o_interview_company_name {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+    color: #212529;
+}
+
+.o_interview_form_title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+.o_interview_job_title {
+    font-size: 0.875rem;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* ── Applicant evaluation tab banner ──────────────────────────────────── */
+.o_interview_eval_banner {
+    font-size: 0.875rem;
+}
+
+/* ── Footer legend ────────────────────────────────────────────────────── */
+.o_interview_footer {
+    border-top: 1px solid #dee2e6;
+    padding-top: 12px;
+    font-size: 0.8125rem;
+}
+
+/* ── Table column widths for the evaluation list ──────────────────────── */
+.o_list_view .o_field_widget[name="partner_name"] {
+    min-width: 160px;
+}
+
+.o_list_view .o_field_widget[name="score_total"] {
+    font-weight: 600;
+}
+
+/* ── Score total badge colours in read mode ───────────────────────────── */
+.o_list_record_selector ~ td[name="score_total"] {
+    font-weight: 700;
+}
