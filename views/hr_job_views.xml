@@ -12,6 +12,12 @@
         <field name="arch" type="xml">
 
             <xpath expr="//notebook" position="inside">
+                <page string="Work Activity" name="work_activity_page">
+                    <field name="work_activity" options="{'collaborative': true}" />
+                </page>
+                <page string="KPI" name="kpi_page">
+                    <field name="kpi" options="{'collaborative': true}" />
+                </page>
                 <page string="Interview Evaluations" name="interview_evaluations_page">
 
                     <div class="o_interview_form_header">
